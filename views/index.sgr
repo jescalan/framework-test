@@ -10,3 +10,5 @@ extends(src='layout.sgr')
         a(href='/preact') Preact
       li
         a(href='/skatejs') SkateJS / Custom Elements
+      li
+        a(href='/polyfill') Custom Elements Polyfill Only

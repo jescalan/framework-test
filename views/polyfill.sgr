@@ -1,0 +1,7 @@
+extends(src='layout.sgr')
+  block(name='content')
+    h1 Web Component Polyfill Only
+    p static render
+
+  block(name='javascript')
+    script(src='js/polyfill.js' defer)

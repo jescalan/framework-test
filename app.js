@@ -8,7 +8,8 @@ const {UglifyJsPlugin} = require('webpack').optimize
 module.exports = {
   entry: {
     'js/skatejs': ['./assets/js/skatejs.js'],
-    'js/preact': ['./assets/js/preact.js']
+    'js/preact': ['./assets/js/preact.js'],
+    'js/polyfill': ['./assets/js/polyfill.js']
   },
   matchers: {
     html: '*(**/)*.sgr',

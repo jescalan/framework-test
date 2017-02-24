@@ -1,0 +1,12 @@
+extends(src='layout.sgr')
+  block(name='content')
+    h1 Simple Front End Framework Implementations
+    h3 for performance testing, or whatever
+
+    p Just navigate to one of these pages, throttle your network and CPU and check the performance!
+
+    ul
+      li
+        a(href='/preact') Preact
+      li
+        a(href='/skatejs') SkateJS / Custom Elements

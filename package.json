@@ -1,0 +1,31 @@
+{
+  "name": "framework-test",
+  "description": "basic setup for testing front end frameworks",
+  "version": "0.0.0",
+  "author": "Jeff Escalante",
+  "bugs": "https://github.com/jescalan/framework-test/issues",
+  "dependencies": {
+    "babel-plugin-transform-react-jsx": "^6.23.0",
+    "babel-preset-env": "^1.1.8",
+    "preact": "^7.2.0",
+    "reshape-standard": "next",
+    "skatejs": "^4.6.7",
+    "skatejs-web-components": "^5.2.1",
+    "spike": "next",
+    "spike-css-standards": "next",
+    "spike-page-id": "next"
+  },
+  "devDependencies": {
+    "snazzy": "^6.0.0",
+    "standard": "^8.6.0"
+  },
+  "homepage": "https://github.com/jescalan/framework-test",
+  "main": "app.js",
+  "private": true,
+  "repository": "https://github.com/jescalan/framework-test",
+  "scripts": {
+    "lint": "standard | snazzy",
+    "start": "spike watch && open localhost:1111",
+    "build": "spike compile"
+  }
+}

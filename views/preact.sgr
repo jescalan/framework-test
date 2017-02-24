@@ -1,0 +1,7 @@
+extends(src='layout.sgr')
+  block(name='content')
+    h1 Preact
+    p static render
+
+  block(name='javascript')
+    script(src='js/preact.js' defer)

@@ -3,6 +3,7 @@ const cssStandards = require('spike-css-standards')
 const jsStandards = require('babel-preset-env')
 const pageId = require('spike-page-id')
 const jsx = require('babel-plugin-transform-react-jsx')
+const {UglifyJsPlugin} = require('webpack').optimize
 
 module.exports = {
   entry: {
@@ -15,11 +16,13 @@ module.exports = {
   },
   ignore: ['**/layout.sgr', '**/_*', '**/.*', '_cache/**', 'readme.md', 'yarn.lock'],
   reshape: htmlStandards({
-    locals: (ctx) => { return { pageId: pageId(ctx), foo: 'bar' } }
+    locals: (ctx) => { return { pageId: pageId(ctx), foo: 'bar' } },
+    minify: true
   }),
-  postcss: cssStandards(),
+  postcss: cssStandards({ minify: true, warnForDuplicates: false }),
   babel: {
     presets: [[jsStandards, { modules: false }]],
     plugins: [[jsx, { pragma: 'h' }]]
-  }
+  },
+  plugins: [new UglifyJsPlugin()]
 }

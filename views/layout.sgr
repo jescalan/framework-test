@@ -18,4 +18,9 @@ html
     main(role='main' id='{{ pageId }}')
       block(name='content')
 
+    h3 Overall Stats
+    ul
+      li
+        a(href='/report') Bundle Stats
+
     block(name='javascript')

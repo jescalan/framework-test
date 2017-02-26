@@ -13,7 +13,8 @@
     "skatejs-web-components": "^5.2.1",
     "spike": "next",
     "spike-css-standards": "next",
-    "spike-page-id": "next"
+    "spike-page-id": "next",
+    "webpack-bundle-analyzer": "^2.3.0"
   },
   "devDependencies": {
     "snazzy": "^6.0.0",

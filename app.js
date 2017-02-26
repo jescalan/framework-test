@@ -3,6 +3,7 @@ const cssStandards = require('spike-css-standards')
 const jsStandards = require('babel-preset-env')
 const pageId = require('spike-page-id')
 const jsx = require('babel-plugin-transform-react-jsx')
+const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer')
 const {UglifyJsPlugin} = require('webpack').optimize
 
 module.exports = {
@@ -25,5 +26,8 @@ module.exports = {
     presets: [[jsStandards, { modules: false }]],
     plugins: [[jsx, { pragma: 'h' }]]
   },
-  plugins: [new UglifyJsPlugin()]
+  plugins: [
+    new UglifyJsPlugin(),
+    new BundleAnalyzerPlugin({ analyzerMode: 'static', openAnalyzer: false })
+  ]
 }
